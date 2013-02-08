@@ -9,7 +9,7 @@ Google Analytics uses first party cookies. As a result, sites that want to track
 
 The recommended method here looks like:
 
-    <a href="https://your-ecommerce-site.com" onclick="_gaq.push(["_link]); return false">Give us your money</a>
+    <a href="https://your-ecommerce-site.com" onclick="_gaq.push(["_link", "https://your-ecommerce-site.com"]); return false">Give us your money</a>
     
 <h2>Why this is destructive</h2> 
 
