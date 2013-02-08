@@ -41,5 +41,10 @@ Here's an example usage. You have 3 domains, and you'd like the traffic between 
 You can still use an onclick handler to do your cross domain tracking. It would look like this:
 
     onclick="if(window._gat){this.href= _gat._getTrackerByName()._getLinkerUrl(this.href);};"
+    
+This:
+  - Checks if `window_gat` is set. This variable only gets set when ga.js had loaded. 
+  - Sets the `href` of the link to be the "linker URL" version of itself.
+  - Doesn't interrupt the user experience.
 
 
