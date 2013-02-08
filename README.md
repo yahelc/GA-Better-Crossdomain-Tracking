@@ -34,3 +34,12 @@ This plugin helps manage all of your cross-domain tracking code in one place, wi
 Here's an example usage. You have 3 domains, and you'd like the traffic between the 3 domains to be tracked seamlessly for any link between them. So, you'd do:
 
         $("a,area").filter("[href^='http']")._link(["yourdomain1.com", "yourdomain2.com", "yourdomain3.com"]);
+        
+        
+<h3>I don't want to use GA's _link, but I don't need jQuery and your plugin is too complex</h2>
+
+You can still use an onclick handler to do your cross domain tracking. It would look like this:
+
+    onclick="if(window._gat){this.href= _gat._getTrackerByName()._getLinkerUrl(this.href);};"
+
+
